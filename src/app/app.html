@@ -1,0 +1,19 @@
+<div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold text-center p-4">Task Manager</h1>
+
+</div>
+
+<div class="grid grid-cols-4 gap-4 px-4">
+    <!-- Task Form -->
+    <app-task-form ></app-task-form>
+
+    <app-task-list [tasks]="todoItems()" [heading]="'Todo'"></app-task-list>
+    <app-task-list [tasks]="inProgressItems()"  [heading]="'InProgress'"></app-task-list>
+    <app-task-list [tasks]="completedItems()"  [heading]="'Completed'"></app-task-list>
+
+
+     <!-- @for (item of todoItems(); track $index) {
+        <p>{{item.task}} {{item.status}}</p>
+     } -->
+
+</div>
